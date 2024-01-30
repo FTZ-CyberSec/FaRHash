@@ -1,0 +1,362 @@
+
+
+/* Style for the Add Schema Page */
+.schema-page {
+    max-height: 450px; /* Adjust to your preference */
+    overflow-y:scroll; /* Allows scrolling on the y-axis */
+    /* display: none; */
+    scrollbar-width: none;  /* Firefox */
+    width: max-content;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(1, 255, 217, 0.233);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.677);
+    text-align: center;
+  }
+
+  .farHash-page{
+    max-height: 450px; /* Adjust to your preference */
+    overflow-y:scroll; /* Allows scrolling on the y-axis */
+    /* display: none; */
+    scrollbar-width: none;  /* Firefox */
+    width: max-content;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(252, 255, 69, 0.228);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.677);
+    text-align: center;
+  }
+  
+
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  } */
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888888a3; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555555b1; 
+  }
+
+  .schema-section {
+    margin-bottom: 20px;
+
+  }
+  
+  .schema-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .attribute-input-group {
+    display: flex;
+    width: fit-content;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Wrap items if they don't fit on one line */
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px;
+  }
+  
+  .attribute-input {
+    padding: 10px;
+    margin-right: 10px;
+    width:fit-content;
+    border: 1px solid rgba(98, 98, 98, 0.3);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.784);
+  }
+  
+  .add-remove-btn {
+    padding: 6px 12px;
+    margin: 0 5px;
+    margin-left: 10px; /* Spacing between the input field and the button */
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(112, 112, 112, 0.832);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .add-remove-btn:hover {
+    background-color: rgba(76, 75, 75, 0.935);
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(90deg, rgba(211, 241, 248, 0.33) 36%, rgba(0, 255, 213, 0.685) 80%);
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .submit-btn:hover {
+    background: linear-gradient(90deg, rgba(42, 197, 253, 0.8) 76%, #1efcd7a6 100%);
+  }
+
+  .send-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(90deg, rgba(253, 29, 29, 0.53) 36%, rgba(247, 136, 136, 0.45) 100%);
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .send-btn:hover {
+    background: linear-gradient(90deg, rgba(252, 101, 67, 0.3) 36%, rgba(252, 93, 25, 0.8) 80%);
+  }
+  
+
+  /* Modal */
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+  .modal-content {
+    background: linear-gradient(90deg, rgba(1, 203, 248, 0.76) 36%, rgba(42, 58, 55, 0.773) 80%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  .modal-content pre {
+    text-align: left;
+    white-space: pre-wrap; /* Ensure JSON is nicely formatted */
+    word-break: break-all;
+    margin-bottom: 20px;
+  }
+  
+  .modal-content button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(15, 252, 46, 0.33) 36%, rgba(0, 255, 213, 0.685) 80%);
+    color: rgb(24, 23, 23);
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background: linear-gradient(90deg, rgba(21, 208, 255, 0.53) 36%, rgba(255, 255, 255, 0.585) 90%);
+  }
+  
+  .notification {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s;
+  }
+  
+  .notification.success {
+    background: linear-gradient(90deg, rgba(0, 255, 21, 0.83) 36%, rgba(174, 255, 98, 0.785) 70%);; /* Green for success */
+    color: #00442d;
+  }
+  
+  .notification.failure {
+    background: linear-gradient(90deg, rgba(253, 0, 0, 0.845) 36%, rgba(248, 72, 72, 0.65) 76%); /* Red for failure */
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .far-hash-result {
+    position: fixed; /* or 'absolute' if you want it relative to the page container */
+    bottom: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    word-break: break-all;
+    background: linear-gradient(90deg, rgba(9, 140, 107, 0.382) 36%, rgba(85, 85, 81, 0.496) 76%); /* Red for failure */
+    backdrop-filter: blur(4px);
+    color: white;
+    max-width: 92%; /* or any specific value */
+    overflow-wrap: break-word;
+    max-height: 16%; /* Adjust to your preference */
+    overflow-y:scroll; /* Allows scrolling on the y-axis */
+    /* display: none; */
+    scrollbar-width: none;  /* Firefox */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .attribute-input::placeholder {
+    color: #ffffff6e; /* Replace with your desired color */
+    opacity: 1; /* Adjust opacity if needed */
+  }
+
+  .results-container {
+    background: #00442d;
+    /* Style for the container that includes entered attributes and Far Hash value */
+  }
+  
+  .entered-attributes {
+    margin-bottom: 20px; /* Spacing between attributes list and Far Hash */
+  }
+  
+  .entered-attributes h4 {
+    margin-top: 10px; /* Spacing for category headers */
+  }
+  
+  .entered-attributes ul {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 0; /* Align with the rest of the content */
+  }
+  
+  .entered-attributes li {
+    background-color: #f2f2f2; /* Light background for each attribute value */
+    margin: 5px 0; /* Spacing between attribute values */
+    padding: 5px; /* Padding inside each attribute value */
+    border-radius: 5px; /* Rounded corners for each attribute value */
+  }
+
+  .results-container {
+    position: absolute; /* or 'fixed' if you want it relative to the viewport */
+    top: 10%; /* Adjust as needed */
+    right: 5%; /* Adjust as needed */
+    z-index: 100; /* Above other elements, adjust as needed */
+    background: linear-gradient(90deg, rgba(24, 175, 175, 0.748) 16%, rgba(234, 247, 62, 0.632) 96%); /* Red for failure */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Space inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 300px; /* Maximum width, adjust as needed */
+    max-height: 550px; /* Adjust to your preference */
+    overflow-y:scroll; /* Allows scrolling on the y-axis */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .results-container h3,
+  .results-container h4 {
+    color: #f3eeee; /* Dark text for contrast */
+    margin-bottom: 0.5rem;
+  }
+  
+  .results-container ul {
+    list-style: none; /* No bullets */
+    padding-left: 0; /* Align with container edge */
+    margin-top: 0;
+  }
+  
+  .results-container li {
+    background: #e9e9e9; /* Light background for each attribute */
+    margin-bottom: 10px; /* Space between attributes */
+    padding: 5px 10px; /* Padding inside attribute items */
+    border-radius: 4px; /* Rounded corners for attribute items */
+    word-break: break-all; /* Ensure long text doesn't overflow */
+  }
+  
+/* Schema select calcfarhash Page style */
+
+/* Base styles for the select element */
+.custom-select {
+  background-color: rgba(249, 255, 248, 0.432);
+  border: 1px solid rgba(255, 255, 255, 0.479);
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  margin-bottom: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Styles for the select element when it's focused */
+.custom-select:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.349);
+}
+
+/* Arrow indicator for the select element */
+.custom-select::after {
+  content: '▼';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #333;
+}
+
+/* Remove arrow in IE */
+.custom-select::-ms-expand {
+  display: none;
+}
+
+/* Optional: styles for options */
+.custom-select option {
+  background-color: rgba(223, 222, 222, 0.466);
+  color: #333;
+}
+
+/* Download download buttons */
+.download-btn {
+  background: linear-gradient(90deg, rgba(130, 138, 20, 0.514) 36%, rgba(3, 40, 41, 0.219) 76%); /* Red for failure */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding for size */
+  margin: 10px; /* Margin for spacing */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  /* font-size: 16px; Font size */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  box-shadow: 0 1px #061f08; /* Darker shade of the button color for shadow */
+  transform: perspective(2px) translateZ(0); /* For 3D transform */
+
+}
+
+.download-btn:hover {
+  background-color: #45a049; /* Darker shade of green on hover */
+
+}
+
+/* Optional: Style for focus outline to maintain accessibility */
+.download-btn:focus {
+  outline: none; /* Removes default outline */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+}
+
+.download-btn:active {
+  /* Further reduce shadow to enhance the pressed effect */
+  box-shadow: 0 1px #367c39;
+  transform: translateY(4px); /* Move the button down on click */
+}

@@ -1,0 +1,51 @@
+/* Glassmorphism styles */
+.glass-button {
+  display: inline-block;
+  border: 0;
+  text-decoration: none;
+  background: linear-gradient(90deg, rgba(106, 99, 19, 0.328) 16%, rgba(37, 79, 219, 0.404) 90%);
+  backdrop-filter: blur(20px);
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 10px; /* Add space to the right of each button */
+  margin-bottom: 10px; /* And space to the bottom */
+  border: 1px solid #adb8c0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.glass-button:hover {
+  background-color: rgba(105, 99, 99, 0.898);
+  color:rgba(255,255,255,0.8)
+  
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  
+  background: lightblue url("https://i.gifer.com/24Br.gif") no-repeat;
+  
+  background-size: cover;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  position: relative; /* Add relative positioning */
+}
+
+.main-buttons {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 1;
+  position: absolute; /* Positioned absolutely within app-container */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%) scale(1.5); /* Adjust for centering and scaling */
+}
+
+/* Style for moving the buttons up */
+.buttons-moved-up {
+  transform: translateX(-50%) translateY(-320px) scale(1); /* Move up and reset scale */
+  opacity: 1; /* Make buttons transparent */
+}
+
