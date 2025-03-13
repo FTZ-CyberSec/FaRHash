@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #e6f0fa, #d1e3ff);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid #e0e7ff;
+}
+
+h1 {
+    text-align: center;
+    color: #3b5998;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+h2 {
+    color: #3b5998;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+h3, h4 {
+    color: #5c7cfa;
+    margin: 15px 0 10px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.form-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    flex: 0 0 100px;
+    color: #3b5998;
+    font-weight: 600;
+}
+
+input, select {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #e0e7ff;
+    border-radius: 8px;
+    font-size: 0.9em;
+    background: #f8f9ff;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #5c7cfa;
+    box-shadow: 0 0 5px rgba(92, 124, 250, 0.3);
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    background: #5c7cfa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #4263eb;
+    transform: translateY(-2px);
+}
+
+.record {
+    background: #40c057;
+}
+
+.record:hover {
+    background: #36a84b;
+}
+
+.submit-btn {
+    background: #4263eb;
+    padding: 12px;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background: #3b5998;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.controls button {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    padding: 0;
+    background: #dfe4ff;
+    color: #4263eb;
+}
+
+.controls button:hover {
+    background: #c7d1ff;
+    transform: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.token-output, .scatter-plots {
+    background: #f8f9ff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: monospace;
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.token-output .token-container, .scatter-plots .token-container {
+    margin: 8px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.token-output .dynamic1, .scatter-plots .dynamic1 {
+    color: #4263eb;
+}
+
+.token-output .dynamic2, .scatter-plots .dynamic2 {
+    color: #40c057;
+}
+
+.token-output .volatile, .scatter-plots .volatile {
+    color: #9b59b6;
+}
+
+.token-output .changed, .scatter-plots .changed {
+    background: #fff3cd;
+    transition: background 0.5s ease;
+}
+
+.scatter-plots .scatter-plot-item {
+    margin-bottom: 15px;
+}
+
+.scatter-plots canvas {
+    background: #ffffff;
+    border: 1px solid #e0e7ff;
+    border-radius: 5px;
+    margin: 8px auto;
+    display: block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.steps-output {
+    color: #333;
+    background: #f8f9ff;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.steps-output h4 {
+    color: #5c7cfa;
+    margin: 10px 0 5px;
+}
+
+.steps-output pre {
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 0.8em;
+    border: 1px solid #e0e7ff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

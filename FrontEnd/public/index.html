@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Token Research Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Identity Token Research Tool</h1>
+            <form id="tokenForm" class="form-grid">
+                <div class="form-group">
+                    <label for="clientId">Client ID</label>
+                    <input type="text" id="clientId" name="clientId" required placeholder="Enter Client ID">
+                </div>
+                
+                <div class="form-group">
+                    <label for="clientSecret">Client Secret</label>
+                    <input type="text" id="clientSecret" name="clientSecret" required placeholder="Enter Secret">
+                </div>
+
+                <div class="form-group">
+                    <label for="inputType">Input Type</label>
+                    <select id="inputType" name="inputType">
+                        <option value="User" selected>User</option>
+                        <option value="IoT">IoT</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="n">N (min 32)</label>
+                    <input type="number" id="n" name="n" min="32" value="32" required placeholder="32">
+                </div>
+
+                <h3>Static Attributes</h3>
+                <div id="staticFields">
+                    <div class="form-group">
+                        <label for="static1">Static 1</label>
+                        <input type="text" id="static1" name="static1" required placeholder="Static Value 1">
+                        <button type="button" class="record" data-target="static1">Record</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="static2">Static 2</label>
+                        <input type="text" id="static2" name="static2" required placeholder="Static Value 2">
+                        <button type="button" class="record" data-target="static2">Record</button>
+                    </div>
+                </div>
+                <div id="staticControls" class="controls hidden">
+                    <button type="button" id="addStatic">+</button>
+                    <button type="button" id="removeStatic">-</button>
+                </div>
+
+                <h3>Dynamic Attributes</h3>
+                <div id="dynamicFields">
+                    <div class="form-group">
+                        <label for="dynamic1">Dynamic 1</label>
+                        <input type="text" id="dynamic1" name="dynamic1" required placeholder="Dynamic Value 1">
+                        <button type="button" class="record" data-target="dynamic1">Record</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="dynamic2">Dynamic 2</label>
+                        <input type="text" id="dynamic2" name="dynamic2" required placeholder="Dynamic Value 2">
+                        <button type="button" class="record" data-target="dynamic2">Record</button>
+                    </div>
+                </div>
+                <div id="dynamicControls" class="controls hidden">
+                    <button type="button" id="addDynamic">+</button>
+                    <button type="button" id="removeDynamic">-</button>
+                </div>
+
+                <h3>Volatile Attribute</h3>
+                <div id="volatileFields">
+                    <div class="form-group">
+                        <label for="volatile1">Volatile 1</label>
+                        <input type="text" id="volatile1" name="volatile1" required placeholder="Volatile Value">
+                        <button type="button" class="record" data-target="volatile1">Record</button>
+                    </div>
+                </div>
+                <div id="volatileControls" class="controls hidden">
+                    <button type="button" id="addVolatile">+</button>
+                    <button type="button" id="removeVolatile">-</button>
+                </div>
+
+                <button type="submit" class="submit-btn">Generate Identity Token</button>
+            </form>
+        </div>
+
+        <div class="right-panel">
+            <div id="result" class="result hidden">
+                <h2>Identity Token Generation Results</h2>
+                <div id="tokenOutput" class="token-output"></div>
+                <div id="scatterPlots" class="scatter-plots">
+                    <h4>Scatter Plots: Spearman Rank Comparison with Previous Token</h4>
+                    <div id="scatterContainer"></div>
+                </div>
+                <div id="stepsOutput" class="steps-output"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
